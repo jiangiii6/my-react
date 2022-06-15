@@ -1,18 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-// eslint-disable-next-line no-use-before-define
-//import App from './App';
+
+import MyReactDOM from './myReact/MyReactDom';
 //import reportWebVitals from './reportWebVitals';
 
-// const reactE = <section>
-//   <header>Counter:0</header>
-//   <button>+</button><button>-</button>
-// </section>;
+// eslint-disable-next-line 
+const reactE = <section>
+  <header>Counter:0</header>
+  <button>+</button><button>-</button>
+</section>;
 
 const Button = (props) => {
-  <button>{props.children}</button>
+ return <button>{props.children}</button>
 }
+
+
+
 
 class Counter extends React.Component {
   // constructor(props) {

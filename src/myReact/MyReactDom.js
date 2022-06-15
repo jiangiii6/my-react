@@ -5,7 +5,7 @@ const render = (
     domElement
 ) => {
     let curDom;
-    console.log("TEST", reactElement)
+   // console.log("TEST", reactElement)
     if (reactElement === undefined) {
         return;
     }
@@ -36,7 +36,15 @@ const render = (
             return
         }
 
-        // Assignment if it is function component
+        //Assignment if it is function component
+
+        if(typeof type === "function"){
+           // console.log("function props", props);
+            const curFunctionEle =  type(props);
+            console.log("curFunctionEle", curFunctionEle );
+            render(curFunctionEle, domElement);
+            return;
+          }
 
         /// else 
         curDom = document.createElement(type);
